@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab6bba1b-af94-4f15-8688-0e7c02236a57" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/call_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/call_api.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +197,7 @@
       <workItem from="1688943249593" duration="3029000" />
       <workItem from="1689001937505" duration="2273000" />
       <workItem from="1689088307323" duration="2229000" />
-      <workItem from="1689172972213" duration="457000" />
+      <workItem from="1689172972213" duration="899000" />
     </task>
     <servers />
   </component>
@@ -220,7 +220,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/data/call_api.py</url>
-          <line>53</line>
+          <line>54</line>
           <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
