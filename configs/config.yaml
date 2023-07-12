@@ -1,0 +1,50 @@
+phase: local
+version: v1
+debug: true
+
+commonColumnNames:
+  trade: "매매금액"
+  rent: "전세금액"
+  are: "전용면적"
+  year: "년"
+  month: "월"
+
+crawlData:
+  tradeUrl: http://openapi.molit.go.kr:8081/OpenAPI_ToolInstallPackage/service/rest/RTMSOBJSvc/getRTMSDataSvcAptTrade
+  rentUrl: http://openapi.molit.go.kr:8081/OpenAPI_ToolInstallPackage/service/rest/RTMSOBJSvc/getRTMSDataSvcAptRent
+  serviceKeyDecoded: vzFxdH7xpXMB/rFZma+5owAjBkTdqCr+zQ40LMCvw+3IXQXshvwn7fOf1agVGjcztAo95ltWi0cMCNCAly6OTw==
+  saveDataDirectory: '../../data'
+
+analyzer:
+  basicStat:
+    columnName: "매매 전고점 시기\n(년/월),매매 전고점,전세 전고점 시기\n(년/월),전세 전고점,{yrm_from}부터\n매매 거래량(건),{yrm_from}부터\n전세 거래량(건)"
+  searchLowestMaejeonGap:
+    upperTableColumnName: "랜드마크 비교시기(년/월),랜드마크 전세가율(%%),매수가,매수시 전세가율(%%)"
+    lowerTableColumnName: "매도시기(년/월),매도가,수익률(%)"
+
+preprocessor:
+  endYearMonth: "202306"
+
+plot:
+  maeJeonPlot:
+    maemaeGraphColor: "mediumblue"
+    jeonseGraphColor: "green"
+    saveFigDir: "../../save_fig"
+    axisLabel:
+      xlabel:
+        text: "날짜"
+        fontsize: 30
+        weight: "bold"
+      ylabel:
+        text: "가격"
+        fontsize: 30
+        weight: "bold"
+    title:
+      text: "{apt} 전용 {area} 매매, 전세 추이"
+      fontsize: 30
+      weight: "bold"
+  statTablePlot:
+    axAxis: "off,tight"
+    tableLoc: "center"
+    autoSetFontSize: false
+    saveTableDir: "../../save_fig"
